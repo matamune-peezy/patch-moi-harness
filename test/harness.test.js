@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { buildInfo, greet, packageName } from "../src/index.js";
+import { buildInfo, formatGreeting, greet, packageName } from "../src/index.js";
 
 describe("patch-moi-harness", () => {
   it("greets the requested name", () => {
@@ -12,5 +12,9 @@ describe("patch-moi-harness", () => {
       packageName,
       channel: "maintained-fork",
     });
+  });
+
+  it("can format a greeting for noisy release smoke tests", () => {
+    assert.equal(formatGreeting(greet("release"), { shout: true }), "HELLO FROM THE MAINTAINED FORK, RELEASE");
   });
 });
