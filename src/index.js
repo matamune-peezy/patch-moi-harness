@@ -1,4 +1,4 @@
-export const packageName = "@peezy.tech/patch-moi-harness";
+export const packageName = "@peezy.tech/patch-moi-harness-fork";
 
 export function greet(name = "world") {
   return `hello from the maintained fork, ${name}`;

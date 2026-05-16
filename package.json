@@ -1,12 +1,12 @@
 {
-  "name": "@peezy.tech/patch-moi-harness",
-  "version": "0.1.3",
+  "name": "@peezy.tech/patch-moi-harness-fork",
+  "version": "0.1.3-fork.0",
   "description": "Tiny releaseable npm package used to exercise patch.moi fork maintenance.",
   "type": "module",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/peezy-tech/patch-moi-harness.git"
+    "url": "git+https://github.com/matamune-peezy/patch-moi-harness.git"
   },
   "bin": {
     "patch-moi-harness": "bin/patch-moi-harness.js"
