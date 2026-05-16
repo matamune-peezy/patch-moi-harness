@@ -4,13 +4,13 @@ import { buildInfo, greet, packageName } from "../src/index.js";
 
 describe("patch-moi-harness", () => {
   it("greets the requested name", () => {
-    assert.equal(greet("patch.moi"), "hello, patch.moi");
+    assert.equal(greet("patch.moi"), "hello from the maintained fork, patch.moi");
   });
 
-  it("reports upstream build metadata", () => {
+  it("reports maintained fork build metadata", () => {
     assert.deepEqual(buildInfo(), {
       packageName,
-      channel: "upstream",
+      channel: "maintained-fork",
     });
   });
 });
