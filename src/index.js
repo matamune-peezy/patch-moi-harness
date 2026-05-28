@@ -4,6 +4,10 @@ export function greet(name = "world") {
   return `hello from the maintained fork, ${name}`;
 }
 
+export function salutation(name = "world") {
+  return greet(name).replace("hello", "salutations");
+}
+
 export function formatGreeting(message, options = {}) {
   return options.shout ? message.toUpperCase() : message;
 }

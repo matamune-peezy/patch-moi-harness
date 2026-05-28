@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { buildInfo, formatGreeting, greet, packageName } from "../src/index.js";
+import { buildInfo, formatGreeting, greet, packageName, salutation } from "../src/index.js";
 
 describe("patch-moi-harness", () => {
   it("greets the requested name", () => {
@@ -16,5 +16,9 @@ describe("patch-moi-harness", () => {
 
   it("can format a greeting for noisy release smoke tests", () => {
     assert.equal(formatGreeting(greet("release"), { shout: true }), "HELLO FROM THE MAINTAINED FORK, RELEASE");
+  });
+
+  it("can produce a formal salutation", () => {
+    assert.equal(salutation("patch.moi"), "salutations from the maintained fork, patch.moi");
   });
 });
